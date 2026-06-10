@@ -116,9 +116,11 @@ function AdminDashboard({ token, onLogout }) {
 
   return (
     <div className="container">
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <h1 style={{ margin: 0 }}>Admin Panel</h1>
-        <button className="btn-delete" onClick={onLogout}>Logout</button>
+      <div className="header">
+        <h1>Admin Panel</h1>
+        <div className="header-right">
+          <button className="btn-delete" onClick={onLogout}>Logout</button>
+        </div>
       </div>
       <p className="subtitle">Manage all users and expenses</p>
 
@@ -259,10 +261,10 @@ function App() {
 
   return (
     <div className="container">
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <h1 style={{ margin: 0 }}>Expense Tracker</h1>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <span style={{ fontSize: 14, color: "var(--text)" }}>@{auth.username}</span>
+      <div className="header">
+        <h1>Expense Tracker</h1>
+        <div className="header-right">
+          <span>@{auth.username}</span>
           <button className="btn-delete" onClick={logout}>Logout</button>
         </div>
       </div>

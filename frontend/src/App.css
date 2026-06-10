@@ -327,6 +327,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-color: var(--accent);
 }
 
+/* ── Header ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  white-space: nowrap;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.header-right span {
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
 /* ── Responsive ── */
 @media (max-width: 520px) {
   .form-grid {
@@ -337,5 +365,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
   .total-banner .amount {
     font-size: 24px;
+  }
+  .header h1 {
+    font-size: 22px;
   }
 }
