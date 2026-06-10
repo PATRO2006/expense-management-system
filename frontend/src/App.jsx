@@ -23,7 +23,7 @@ function App() {
 
   const fetchExpenses = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/expenses");
+      const response = await fetch("https://expense-management-system-1-p1ec.onrender.com/expenses");
       const data = await response.json();
       setExpenses(data);
     } catch (error) {
@@ -43,7 +43,7 @@ function App() {
     };
 
     try {
-      await fetch("http://127.0.0.1:8000/expenses", {
+      await fetch("https://expense-management-system-1-p1ec.onrender.com/expenses", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(expenseData),
@@ -179,7 +179,7 @@ function App() {
                       className="btn-delete"
                       onClick={async () => {
                         try {
-                          await fetch(`http://127.0.0.1:8000/expenses/${expense.id}`, { method: "DELETE" });
+                          await fetch(`https://expense-management-system-1-p1ec.onrender.com/expenses/${expense.id}`, { method: "DELETE" });
                           fetchExpenses();
                         } catch (error) {
                           console.error(error);
